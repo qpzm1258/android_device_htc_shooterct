@@ -178,3 +178,9 @@ $(call inherit-product, device/htc/shooteru/media_htcaudio.mk)
 
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
+# Discard inherited values and use our own instead.
+PRODUCT_DEVICE := shooteru
+PRODUCT_NAME := shooteru
+PRODUCT_BRAND := htc
+PRODUCT_MODEL := EVO 3D
+PRODUCT_MANUFACTURER := HTC
