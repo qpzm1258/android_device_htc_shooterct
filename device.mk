@@ -48,10 +48,9 @@ PRODUCT_COPY_FILES += \
 
 ## ramdisk stuffs
 PRODUCT_COPY_FILES += \
-    device/htc/shooteru/prebuilt/init:root/init \
-    device/htc/shooteru/init.shooteru.rc:root/init.shooteru.rc \
-    device/htc/shooteru/init.shooteru.usb.rc:root/init.shooteru.usb.rc \
-    device/htc/shooteru/ueventd.shooteru.rc:root/ueventd.shooteru.rc
+    device/htc/shooteru/ramdisk/init.shooteru.rc:root/init.shooteru.rc \
+    device/htc/shooteru/ramdisk/init.shooteru.usb.rc:root/init.shooteru.usb.rc \
+    device/htc/shooteru/ramdisk/ueventd.shooteru.rc:root/ueventd.shooteru.rc
 
 ## We have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
@@ -171,7 +170,7 @@ PRODUCT_COPY_FILES += \
 
 # misc
 PRODUCT_COPY_FILES += \
-    device/htc/shooteru/vold.fstab:system/etc/vold.fstab
+    device/htc/shooteru/configs/vold.fstab:system/etc/vold.fstab
 
 ## htc audio settings
 $(call inherit-product, device/htc/shooteru/media_htcaudio.mk)
