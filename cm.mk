@@ -1,3 +1,7 @@
+# Camera
+PRODUCT_PACKAGES := \
+    Camera
+
 # Inherit some common CM stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
