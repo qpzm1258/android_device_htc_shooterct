@@ -26,7 +26,8 @@ DEVICE_PACKAGE_OVERLAYS += device/htc/shooteru/overlay
 PRODUCT_COPY_FILES += \
     device/htc/shooteru/ramdisk/init.shooteru.rc:root/init.shooteru.rc \
     device/htc/shooteru/ramdisk/init.shooteru.usb.rc:root/init.shooteru.usb.rc \
-    device/htc/shooteru/ramdisk/ueventd.shooteru.rc:root/ueventd.shooteru.rc
+    device/htc/shooteru/ramdisk/ueventd.shooteru.rc:root/ueventd.shooteru.rc \
+    device/htc/shooteru/ramdisk/fstab.shooteru:root/fstab.shooteru
 
 ## recovery and custom charging
 PRODUCT_COPY_FILES += \
