@@ -3,6 +3,7 @@ import init.shooteru.usb.rc
 on early-init
     mkdir /storage 0050 system sdcard_r
     mkdir /storage/sdcard0 0000 system system
+    mkdir /storage/sdcard1 0000 system system
 
     # for backwards compatibility
     symlink /storage/sdcard0 /sdcard
@@ -283,27 +284,9 @@ on property:init.svc.bootanim=stopped
     write /sys/devices/platform/panel_3d/3D_mode 0
     start qcom-post-boot
 
-service htc_ebdlogd /system/bin/htc_ebdlogd -s -k -P 7 -n 10 -N 10
-    user root
-    disabled
-    oneshot
-    ioprio idle 0
-
-service htc_ebdlogd_rel /system/bin/htc_ebdlogd -s -k -n 10 -N 10
-    user root
-    disabled
-    oneshot
-    ioprio idle 0
-
 service 3d_camera /system/bin/3D_calibration
     class main
     user root
-
-on property:ro.build.tags=test-keys
-    start htc_ebdlogd
-
-on property:ro.build.tags=release-keys
-    start htc_ebdlogd_rel
 
 # QMUX must be in multiple groups to support external process connections
 service qmuxd /system/bin/qmuxd
