@@ -160,7 +160,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 $(call inherit-product-if-exists, vendor/htc/shooteru/shooteru-vendor.mk)
 
 # media profiles and capabilities spec
-$(call inherit-product, device/htc/shooter/media_a1026.mk)
+$(call inherit-product, device/htc/shooteru/media_a1026.mk)
 
 ## htc audio settings
 $(call inherit-product, device/htc/shooteru/media_htcaudio.mk)
