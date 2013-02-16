@@ -56,6 +56,8 @@ on fs
     symlink /system/vendor/firmware/fw_bcmdhd_apsta.bin /vendor/firmware/fw_bcmdhd_apsta.bin
     symlink /system/vendor/firmware/fw_bcmdhd_p2p.bin /vendor/firmware/fw_bcmdhd_p2p.bin
     symlink /system/vendor/firmware/bcm4329.hcd /vendor/firmware/bcm4329.hcd
+    symlink /system/vendor/firmware/bcm4329.hcd /vendor/firmware/bcm4330.hcd
+
     
     # HACK: We need to re-do the firmware	
     # mounting / symlinking this will do for now.	
@@ -101,6 +103,15 @@ on boot
     mkdir /data/misc/wifi/sockets 0770 wifi wifi
     mkdir /data/misc/dhcp 0770 dhcp dhcp
     chown dhcp dhcp /data/misc/dhcp
+
+    mkdir /dev/socket/qmux_radio 0770 radio radio
+    chmod 2770 /dev/socket/qmux_radio
+    mkdir /dev/socket/qmux_audio 0770 media audio
+    chmod 2770 /dev/socket/qmux_audio
+    mkdir /dev/socket/qmux_bluetooth 0770 bluetooth bluetooth
+    chmod 2770 /dev/socket/qmux_bluetooth
+    mkdir /dev/socket/qmux_gps 0770 gps gps
+    chmod 2770 /dev/socket/qmux_gps
 
     # create symlink for fb1 as HDMI
     symlink /dev/graphics/fb1 /dev/graphics/hdmi
@@ -229,13 +240,6 @@ service iprenew_bnep0 /system/bin/dhcpcd -n
     class main
     disabled
     oneshot
-
-# bugreport is triggered by the KEY_VOLUMEUP and KEY_VOLUMEDOWN keycodes
-service bugreport /system/bin/dumpstate -d -v -o /sdcard/bugreports/bugreport
-    class main
-    disabled
-    oneshot
-    keycodes 114 115
 
 service rmt_storage /system/bin/rmt_storage /dev/block/mmcblk0p25 /dev/block/mmcblk0p26 /dev/block/mmcblk0p18
     class core
