@@ -17,17 +17,21 @@ on early-init
     mkdir /vendor/firmware/misc 0771 system system
 
     wait /dev/block/mmcblk0p17
+    wait /dev/block/mmcblk0p19
     mount vfat /dev/block/mmcblk0p17 /vendor/firmware/misc ro shortname=lower
+    mount vfat /dev/block/mmcblk0p19 /vendor/firmware/adsp ro shortname=lower
 
-    symlink /vendor/firmware/misc/q6.b07 /vendor/firmware/q6.b07
-    symlink /vendor/firmware/misc/q6.b06 /vendor/firmware/q6.b06
-    symlink /vendor/firmware/misc/q6.b05 /vendor/firmware/q6.b05
-    symlink /vendor/firmware/misc/q6.b04 /vendor/firmware/q6.b04
-    symlink /vendor/firmware/misc/q6.b03 /vendor/firmware/q6.b03
-    symlink /vendor/firmware/misc/q6.b02 /vendor/firmware/q6.b02
-    symlink /vendor/firmware/misc/q6.b01 /vendor/firmware/q6.b01
-    symlink /vendor/firmware/misc/q6.b00 /vendor/firmware/q6.b00
-    symlink /vendor/firmware/misc/q6.mdt /vendor/firmware/q6.mdt
+    symlink /vendor/firmware/adsp/q6.b09 /vendor/firmware/q6.b09
+    symlink /vendor/firmware/adsp/q6.b08 /vendor/firmware/q6.b08
+    symlink /vendor/firmware/adsp/q6.b07 /vendor/firmware/q6.b07
+    symlink /vendor/firmware/adsp/q6.b06 /vendor/firmware/q6.b06
+    symlink /vendor/firmware/adsp/q6.b05 /vendor/firmware/q6.b05
+    symlink /vendor/firmware/adsp/q6.b04 /vendor/firmware/q6.b04
+    symlink /vendor/firmware/adsp/q6.b03 /vendor/firmware/q6.b03
+    symlink /vendor/firmware/adsp/q6.b02 /vendor/firmware/q6.b02
+    symlink /vendor/firmware/adsp/q6.b01 /vendor/firmware/q6.b01
+    symlink /vendor/firmware/adsp/q6.b00 /vendor/firmware/q6.b00
+    symlink /vendor/firmware/adsp/q6.mdt /vendor/firmware/q6.mdt
     symlink /vendor/firmware/misc/modem.b09 /vendor/firmware/modem.b09
     symlink /vendor/firmware/misc/modem.b08 /vendor/firmware/modem.b08
     symlink /vendor/firmware/misc/modem.b07 /vendor/firmware/modem.b07
