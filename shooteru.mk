@@ -126,6 +126,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     gps.shooteru
 
+## The gps config appropriate for this device
+PRODUCT_COPY_FILES += device/common/gps/gps.conf_EU:system/etc/gps.conf
+
 # Torch
 PRODUCT_PACKAGES += \
     Torch
