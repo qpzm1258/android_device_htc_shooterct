@@ -65,7 +65,7 @@ on fs
 
     mkdir /vendor/etc 0771 system system
     symlink /system/vendor/etc/audio_effects.conf /vendor/etc/audio_effects.conf
-    symlink /system/vendor/etc/audio_policy.conf /vendor/etc/audio_policy.conf
+    symlink /system/etc/audio_policy.conf /vendor/etc/audio_policy.conf
 
 on post-fs-data
     # double check the perms and set owner
@@ -87,11 +87,18 @@ on boot
     chown system system /sys/devices/platform/msm_sdcc.4/polling
 
     # bluetooth power up/down interface
+
+    echo 1 > /sys/class/rfkill0/state
+    echo 1 > /sys/class/rfkill1/state
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/type
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/state
-    chmod 0660                /sys/class/rfkill/rfkill0/state
+    chmod 0660 /sys/class/rfkill/rfkill0/state
+    chown bluetooth bluetooth /sys/class/rfkill/rfkill1/type
+    chown bluetooth bluetooth /sys/class/rfkill/rfkill1/state
+    chmod 0660 /sys/class/rfkill/rfkill1/state
 
     # bluetooth MAC address programming
+
     chown bluetooth bluetooth /sys/module/htc_bdaddress/parameters/bdaddress
     setprop ro.bt.bdaddr_path /sys/module/htc_bdaddress/parameters/bdaddress
 
