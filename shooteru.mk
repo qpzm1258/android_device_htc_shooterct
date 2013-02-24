@@ -159,10 +159,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.google.locationfeatures=1 \
     dalvik.vm.dexopt-flags=m=y
 
-BOARD_BLUETOOTH_USES_HCIATTACH_PROPERTY= true
-TARGET_NEEDS_BLUETOOTH_INIT_DELAY= true
-BOARD_HAVE_SAMSUNG_BLUETOOTH= true
-
+## ADB
 ADDITIONAL_DEFAULT_PROPERTIES+=  ro.adb.secure=0
 
 ## (2) Also get non-open-source specific aspects if available
