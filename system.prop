@@ -7,8 +7,21 @@ debug.sf.hw=1
 debug.composition.type=c2d
 ro.sf.compbypass.enable=0
 dev.pm.dyn_samplingrate=1
+
 lpa.use-stagefright=true
 lpa.decode=false
+use.non-omx.mp3.decoder=true
+use.non-omx.aac.decode=true
+
+#system props for the MM modules
+
+media.stagefright.enable-player=true
+media.stagefright.enable-http=true
+media.stagefright.enable-fma2dp=false
+media.stagefright.enable-aac=true
+media.stagefright.enable-qcp=true
+media.stagefright.enable-scan=true
+mmp.enable.3g2=true
 
 #cm qcom build lub
 com.qc.hardware=true
