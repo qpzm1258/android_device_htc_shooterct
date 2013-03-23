@@ -271,15 +271,6 @@ on property:service.modem.enable=1
 on property:service.modem.enable=0
     stop modem
 
-service hciattach /system/bin/brcm_patchram_plus --enable_hci \
-        --tosleep 50000 --baudrate 3000000 --use_baudrate_for_download \
-        --patchram /vendor/firmware/bcm4329.hcd /dev/ttyHS0
-    class main
-    user bluetooth
-    group bluetooth net_bt_admin
-    disabled
-    oneshot
-
 service hdmid /system/bin/hdmid
     class main
     socket hdmid stream 0660 root system graphics
@@ -292,16 +283,16 @@ service htcbatt /system/bin/htcbatt
     class late_start
     user root
 
-service mpdecision /system/bin/mpdecision --no_sleep --avg_comp
-    class main
-    user root
-    disabled
+#service mpdecision /system/bin/mpdecision --no_sleep --avg_comp
+#    class main
+#    user root
+#    disabled
 
-service thermald /system/bin/thermald
-    class main
-    user root
-    group root
-    disabled
+#service thermald /system/bin/thermald
+#    class main
+#    user root
+#    group root
+#    disabled
 
 service qcom-post-boot /system/bin/sh /system/etc/init.qcom.post_boot.sh
     class late_start
