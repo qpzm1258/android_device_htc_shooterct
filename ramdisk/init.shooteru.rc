@@ -279,7 +279,7 @@ on property:ro.hdmi.enable=true
     start hdmid
 
 service htcbatt /system/bin/htcbatt
-    class late_start
+    class main
     user root
 
 #service mpdecision /system/bin/mpdecision --no_sleep --avg_comp
