@@ -1,12 +1,14 @@
-# Camera
-PRODUCT_PACKAGES := \
-    Camera
+# Inherit some common Slim stuff.
+$(call inherit-product, vendor/slim/config/gsm.mk)
 
 # Inherit some common Slim stuff.
 $(call inherit-product, vendor/slim/config/common_full_phone.mk)
 
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/slim/config/gsm.mk)
+# Inherit some common Slim stuff.
+$(call inherit-product, vendor/slim/config/common_ledflash.mk)
+
+# Inherit some common Slim stuff.
+$(call inherit-product, vendor/slim/config/themes_common.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/htc/shooteru/shooteru.mk)
@@ -20,11 +22,12 @@ PRODUCT_BRAND := HTC
 PRODUCT_MANUFACTURER := HTC
 PRODUCT_MODEL := Evo 3D GSM
 
+PRODUCT_COPY_FILES +=  \
+    vendor/slim/prebuilt/hdpi/bootanimation.zip:system/media/bootanimation.zip
+
 # Bootanimation
 TARGET_SCREEN_HEIGHT := 960
 TARGET_SCREEN_WIDTH := 540
 
 # Release name
 PRODUCT_RELEASE_NAME := shooteru
--include vendor/slim/config/common_versions.mk
-
