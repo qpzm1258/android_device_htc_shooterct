@@ -2,11 +2,11 @@
 PRODUCT_PACKAGES := \
     Camera
 
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+# Inherit some common Slim stuff.
+$(call inherit-product, vendor/slim/config/common_full_phone.mk)
 
 # Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/gsm.mk)
+$(call inherit-product, vendor/slim/config/gsm.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/htc/shooteru/shooteru.mk)
@@ -15,7 +15,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=htc_shooteru BUILD_FINGERPRINT="htc
 
 # Device naming
 PRODUCT_DEVICE := shooteru
-PRODUCT_NAME := cm_shooteru
+PRODUCT_NAME := slim_shooteru
 PRODUCT_BRAND := HTC
 PRODUCT_MANUFACTURER := HTC
 PRODUCT_MODEL := Evo 3D GSM
@@ -26,5 +26,5 @@ TARGET_SCREEN_WIDTH := 540
 
 # Release name
 PRODUCT_RELEASE_NAME := shooteru
--include vendor/cm/config/common_versions.mk
+-include vendor/slim/config/common_versions.mk
 
