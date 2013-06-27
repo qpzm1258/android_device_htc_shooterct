@@ -65,7 +65,7 @@
 
          Must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLevels">
-        <item>11</item>
+        <item>4</item>
         <item>41</item>
         <item>91</item>
         <item>161</item>
@@ -82,16 +82,16 @@
          than the size of the config_autoBrightnessLevels array.
     -->
     <integer-array name="config_autoBrightnessLcdBacklightValues">
-	<item>35</item>
-        <item>56</item>
-        <item>69</item>
-        <item>81</item>
-        <item>112</item>
-        <item>143</item>
-        <item>163</item>
-        <item>186</item>
-        <item>208</item>
-        <item>231</item>
+        <item>10</item>
+        <item>27</item>
+        <item>41</item>
+        <item>61</item>
+        <item>80</item>
+        <item>96</item>
+        <item>108</item>
+        <item>144</item>
+        <item>181</item>
+        <item>225</item>
         <item>255</item>
     </integer-array>
 
@@ -131,7 +131,7 @@
     </integer-array>
 
     <!-- Minimum screen brightness allowed by the power manager. -->
-    <integer name="config_screenBrightnessDim">10</integer>
+    <integer name="config_screenBrightnessDim">3</integer>
 
     <!-- XXXXX NOTE THE FOLLOWING RESOURCES USE THE WRONG NAMING CONVENTION.
          Please don't copy them, copy anything else. -->
