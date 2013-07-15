@@ -19,8 +19,7 @@ PRODUCT_MODEL := Evo 3D GSM
 PRODUCT_PROPERTY_OVERRIDES += ro.buildzipid=liquid.shooteru.UNOFFICIAL.$(shell date +%m%d%y).$(shell date +%H%M%S)
 
 # Boot animation
-TARGET_SCREEN_WIDTH := 540
-TARGET_SCREEN_HEIGHT := 960
+TARGET_SCREEN_WIDTH := 480
 
 # Release name
 PRODUCT_RELEASE_NAME := shooteru
