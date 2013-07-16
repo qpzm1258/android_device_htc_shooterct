@@ -45,6 +45,9 @@ TARGET_KERNEL_CONFIG := shooter_u_defconfig
 # Camera
 BOARD_HTC_3D_SUPPORT := true
 
+# Compiler Optimization
+USE_MORE_OPT_FLAGS := yes
+
 # Bluetooth/Wifi
 -include device/htc/msm8660-common/bcmdhd.mk
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/shooteru/bluetooth
