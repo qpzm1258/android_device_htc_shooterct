@@ -96,6 +96,6 @@ TW_INCLUDE_DUMLOCK := true
 TW_INCLUDE_JB_CRYPTO := true
 HAVE_SELINUX := true
 TW_BRIGHTNESS_PATH := /sys/devices/platform/msm_fb.590337/leds/lcd-backlight/brightness
-TARGET_RECOVERY_FSTAB := device/htc/shooteru/recovery/etc/twrp.fstab
+TW_MAX_BRIGHTNESS := 255
 TW_EXTERNAL_STORAGE_PATH := "/sdcard"
 TW_EXTERNAL_STORAGE_MOUNT_POINT := "sdcard"
