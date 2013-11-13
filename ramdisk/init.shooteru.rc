@@ -1,10 +1,10 @@
 import init.shooteru.usb.rc
 
 on init
-    mkdir /mnt/media_rw/sdcard0 0775 media_rw media_rw
-    mkdir /mnt/media_rw/usbdisk 0775 media_rw media_rw
-    mkdir /storage/sdcard0 0775 system system
-    mkdir /storage/usbdisk 0775 system system
+    mkdir /mnt/media_rw/sdcard0 0700 media_rw media_rw
+    mkdir /mnt/media_rw/usbdisk 0700 media_rw media_rw
+    mkdir /storage/sdcard0 0700 root root
+    mkdir /storage/usbdisk 0700 root root
 
     export EXTERNAL_STORAGE /storage/sdcard0
 
@@ -196,6 +196,10 @@ service rmt_storage /system/bin/rmt_storage /dev/block/mmcblk0p25 /dev/block/mmc
 
 #sdcard daemon
 service fuse_sdcard0 /system/bin/sdcard -u 1023 -g 1023 /mnt/media_rw/sdcard0 /storage/sdcard0
+    class late_start
+    disabled
+
+service fuse_usbdisk /system/bin/sdcard -u 1023 -g 1023 /mnt/media_rw/usbdisk /storage/usbdisk
     class late_start
     disabled
 
