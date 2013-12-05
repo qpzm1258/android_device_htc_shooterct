@@ -173,7 +173,7 @@ on boot
     # Force loading of modem and Q6 images
     write /dev/smd_pkt_loopback 1
 
-service wpa_supplicant /system/bin/wpa_supplicant -dd -Dnl80211 \
+service wpa_supplicant /system/bin/wpa_supplicant -Dnl80211 \
     -iwlan0 -c /data/misc/wifi/wpa_supplicant.conf \
     -O/data/misc/wifi/sockets \
     -e/data/misc/wifi/entropy.bin -g@android:wpa_wlan0
