@@ -1,6 +1,6 @@
 import init.shooteru.usb.rc
 
-on early-init
+on init
     mkdir /storage 0050 root sdcard_r
     mkdir /storage/sdcard0 0000 system system
     mkdir /storage/usbdisk 0000 system system
@@ -13,10 +13,7 @@ on early-init
 
     export EXTERNAL_STORAGE /storage/sdcard0
 
-    # Force loading of modem and Q6 images
-    write /dev/smd_pkt_loopback 1
 
-on init
     mkdir /devlog 0700 root root
 
 on fs
@@ -221,6 +218,11 @@ service dhcpcd_bt-pan /system/bin/dhcpcd -ABKL
     oneshot
 
 service iprenew_wlan0 /system/bin/dhcpcd -n
+    class main
+    disabled
+    oneshot
+
+service iprenew_bt-pan /system/bin/dhcpcd -n
     class main
     disabled
     oneshot
