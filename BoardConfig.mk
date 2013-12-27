@@ -42,6 +42,8 @@ TARGET_HARDWARE_3D := true
 # Kernel Details
 TARGET_KERNEL_CONFIG := shooter_u_defconfig
 
+TARGET_USES_ION := true
+
 # Camera
 BOARD_HTC_3D_SUPPORT := true
 
