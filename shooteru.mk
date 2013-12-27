@@ -117,10 +117,6 @@ PRODUCT_COPY_FILES += \
     device/htc/shooteru/firmware/yamato_pfp.fw:system/etc/firmware/yamato_pfp.fw \
     device/htc/shooteru/firmware/yamato_pm4.fw:system/etc/firmware/yamato_pm4.fw
 
-# Kernel init.d script
-PRODUCT_COPY_FILES += \
-    device/htc/shooteru/configs/99golanX:system/etc/init.d/99golanX
-
 # GPS
 PRODUCT_PACKAGES += \
     gps.shooteru
