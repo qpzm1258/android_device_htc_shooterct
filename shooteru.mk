@@ -29,6 +29,16 @@ PRODUCT_COPY_FILES += \
     device/htc/shooteru/ramdisk/ueventd.shooteru.rc:root/ueventd.shooteru.rc \
     device/htc/shooteru/ramdisk/fstab.shooteru:root/fstab.shooteru
 
+## recovery and custom charging
+PRODUCT_PACKAGES += \
+    init.recovery.shooteru.rc \
+    twrp.fstab \
+    choice_fn \
+    detect_key \
+    offmode_charging \
+    power_test \
+    htcbatt
+
 ## dsp Audio
 PRODUCT_COPY_FILES += \
     device/htc/shooteru/dsp/AIC3254_REG.csv:system/etc/AIC3254_REG.csv \
@@ -159,7 +169,7 @@ $(call inherit-product, device/htc/shooteru/media_htcaudio.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
 # Discard inherited values and use our own instead.
-PRODUCT_NAME := shooteru
+PRODUCT_NAME := full_shooteru
 PRODUCT_DEVICE := shooteru
 PRODUCT_BRAND := HTC
 PRODUCT_MANUFACTURER := HTC
