@@ -1,7 +1,3 @@
-# Camera
-PRODUCT_PACKAGES := \
-    Camera
-
 # Inherit some common CM stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
@@ -23,8 +19,8 @@ PRODUCT_MODEL := Evo 3D GSM
 # Bootanimation
 TARGET_SCREEN_HEIGHT := 960
 TARGET_SCREEN_WIDTH := 540
+TARGET_BOOTANIMATION_HALF_RES := true
 
 # Release name
 PRODUCT_RELEASE_NAME := shooteru
--include vendor/cm/config/common_versions.mk
 

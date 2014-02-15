@@ -22,14 +22,14 @@ $(call inherit-product, device/htc/msm8660-common/msm8660.mk)
 
 DEVICE_PACKAGE_OVERLAYS += device/htc/shooteru/overlay
 
-## ramdisk stuffs
+# ramdisk stuff
 PRODUCT_COPY_FILES += \
     device/htc/shooteru/ramdisk/init.shooteru.rc:root/init.shooteru.rc \
     device/htc/shooteru/ramdisk/init.shooteru.usb.rc:root/init.shooteru.usb.rc \
     device/htc/shooteru/ramdisk/ueventd.shooteru.rc:root/ueventd.shooteru.rc \
     device/htc/shooteru/ramdisk/fstab.shooteru:root/fstab.shooteru
 
-## recovery and custom charging
+# recovery and custom charging
 PRODUCT_PACKAGES += \
     init.recovery.shooteru.rc \
     twrp.fstab \
@@ -39,7 +39,7 @@ PRODUCT_PACKAGES += \
     power_test \
     htcbatt
 
-## dsp Audio
+# dsp Audio
 PRODUCT_COPY_FILES += \
     device/htc/shooteru/dsp/AIC3254_REG.csv:system/etc/AIC3254_REG.csv \
     device/htc/shooteru/dsp/AIC3254_REG_DualMic.csv:system/etc/AIC3254_REG_DualMic.csv \
@@ -134,26 +134,26 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
 
-## We have enough storage space to hold precise GC data
+# We have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
 
 # Set build date
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
-## Fix USB transfer speeds
+# Fix USB transfer speeds
 PRODUCT_PROPERTY_OVERRIDES += ro.vold.umsdirtyratio=20
 
-## misc
+# misc
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.setupwizard.enable_bypass=1 \
     dalvik.vm.lockprof.threshold=500 \
     ro.com.google.locationfeatures=1 \
     dalvik.vm.dexopt-flags=m=y
 
-## ADB
+# ADB
 ADDITIONAL_DEFAULT_PROPERTIES+=  ro.adb.secure=0
 
-## (2) Also get non-open-source specific aspects if available
+# (2) Also get non-open-source specific aspects if available
 $(call inherit-product-if-exists, vendor/htc/shooteru/shooteru-vendor.mk)
 
 # media profiles and capabilities spec
@@ -164,9 +164,3 @@ $(call inherit-product, device/htc/shooteru/media_htcaudio.mk)
 
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
-# Discard inherited values and use our own instead.
-PRODUCT_NAME := full_shooteru
-PRODUCT_DEVICE := shooteru
-PRODUCT_BRAND := HTC
-PRODUCT_MANUFACTURER := HTC
-PRODUCT_MODEL := EVO 3D GSM
