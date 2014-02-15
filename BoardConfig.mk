@@ -45,8 +45,12 @@ TARGET_KERNEL_CONFIG := shooter_u_defconfig
 # Camera
 BOARD_HTC_3D_SUPPORT := true
 
+# Bootanimation
+TARGET_BOOTANIMATION_TEXTURE_CACHE := true
+TARGET_BOOTANIMATION_USE_RGB565 := true
+
 # Compiler Optimization
-USE_MORE_OPT_FLAGS := yes
+LINARO_GCC_VERSION := 4.8
 
 #ION
 TARGET_USES_ION := true
