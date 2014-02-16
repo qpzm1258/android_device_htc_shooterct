@@ -39,9 +39,13 @@ BOARD_USE_NEW_LIBRIL_HTC := true
 # 3D Support
 TARGET_HARDWARE_3D := true
 
+#Rom toolchain
+LINARO_GCC_VERSION := 4.8
+
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/htc/shooteru
 TARGET_KERNEL_CONFIG := shooter_u_defconfig
+TARGET_KERNEL_CUSTOM_TOOLCHAIN := LK
 TARGET_GCC_VERSION_ARM := LK
 
 # Camera
@@ -50,9 +54,6 @@ BOARD_HTC_3D_SUPPORT := true
 # Bootanimation
 TARGET_BOOTANIMATION_TEXTURE_CACHE := true
 TARGET_BOOTANIMATION_USE_RGB565 := true
-
-#Rom toolchain
-LINARO_GCC_VERSION := 4.8
 
 #ION
 TARGET_USES_ION := true
