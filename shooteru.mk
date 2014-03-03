@@ -154,6 +154,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.google.locationfeatures=1 \
     dalvik.vm.dexopt-flags=m=y
 
+# OTA ID
+PRODUCT_PROPERTY_OVERRIDES += \
+    otaupdater.otaid=liquidshooteru
+
 ## ADB
 ADDITIONAL_DEFAULT_PROPERTIES+=  ro.adb.secure=0
 
