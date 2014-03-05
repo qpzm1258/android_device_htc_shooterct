@@ -22,11 +22,5 @@
         "repository": "android_hardware_qcom_media-legacy",
         "target_path": "hardware/qcom/media-legacy",
         "revision": "kitkat"
-    },
-    {
-        "remote": "ls",
-        "repository": "android_hardware_qcom_display-legacy",
-        "target_path": "hardware/qcom/display-legacy",
-        "revision": "kitkat"
     }
 ]
