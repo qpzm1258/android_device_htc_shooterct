@@ -121,7 +121,8 @@ PRODUCT_COPY_FILES += \
 
 # Kernel init.d script
 PRODUCT_COPY_FILES += \
-    device/htc/shooteru/configs/99kernel:system/etc/init.d/99kernel
+    device/htc/shooteru/configs/99kernel:system/etc/init.d/99kernel \
+    device/htc/shooteru/configs/00_frandom:system/etc/init.d/00_frandom
 
 # GPS
 PRODUCT_PACKAGES += \
