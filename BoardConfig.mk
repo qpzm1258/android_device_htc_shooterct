@@ -39,9 +39,6 @@ BOARD_USE_NEW_LIBRIL_HTC := true
 # 3D Support
 TARGET_HARDWARE_3D := true
 
-#Rom toolchain
-LINARO_GCC_VERSION := 4.8
-
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/htc/shooter
 TARGET_KERNEL_CONFIG := shooter_u_defconfig
