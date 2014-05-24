@@ -8,4 +8,4 @@
 /system         ext4            /dev/block/mmcblk0p22
 /misc           emmc            /dev/block/mmcblk0p31
 
-/sdcard  vfat  /dev/block/mmcblk1p1  /dev/block/mmcblk1  flags=display="Micro SDcard";storage;wipeingui;removable
+/sdcard  vfat  /dev/block/mmcblk1p1
