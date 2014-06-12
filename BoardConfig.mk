@@ -40,7 +40,7 @@ BOARD_USE_NEW_LIBRIL_HTC := true
 TARGET_HARDWARE_3D := true
 
 # Kernel Details
-TARGET_KERNEL_CONFIG := shooter_u_defconfig
+TARGET_KERNEL_CONFIG := shooter_ct_defconfig
 
 # Camera
 BOARD_HTC_3D_SUPPORT := true
