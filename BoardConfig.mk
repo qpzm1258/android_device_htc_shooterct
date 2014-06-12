@@ -28,11 +28,11 @@
 -include device/htc/msm8660-common/BoardConfigCommon.mk
 
 # inherit from the proprietary version
--include vendor/htc/shooteru/BoardConfigVendor.mk
+-include vendor/htc/shooterct/BoardConfigVendor.mk
 
-TARGET_BOOTLOADER_BOARD_NAME := shooteru
+TARGET_BOOTLOADER_BOARD_NAME := shooterct
 
-BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := shooteru
+BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := shooterct
 
 BOARD_USE_NEW_LIBRIL_HTC := true
 
@@ -50,13 +50,13 @@ TARGET_USES_ION := true
 
 # Bluetooth/Wifi
 -include device/htc/msm8660-common/bcmdhd.mk
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/shooteru/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/shooterct/bluetooth
 
 # Custom LUN File Path
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/class/android_usb/android0/f_mass_storage/lun/file
 
-BOARD_KERNEL_CMDLINE := console=ttyHSL0 androidboot.hardware=shooteru no_console_suspend=1
-BOARD_KERNEL_BASE := 0x48000000
+BOARD_KERNEL_CMDLINE := console=ttyHSL0 androidboot.hardware=shooterct no_console_suspend=1
+BOARD_KERNEL_BASE := 0x48800000
 BOARD_KERNEL_PAGE_SIZE := 2048 
 
 # cat /proc/emmc
@@ -82,8 +82,8 @@ BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216
 BOARD_FLASH_BLOCK_SIZE := 262144
 
 #Recovery
-TARGET_RECOVERY_FSTAB := device/htc/shooteru/ramdisk/fstab.shooteru
-TARGET_RECOVERY_UI_LIB := librecovery_ui_shooteru
+TARGET_RECOVERY_FSTAB := device/htc/shooterct/ramdisk/fstab.shooterct
+TARGET_RECOVERY_UI_LIB := librecovery_ui_shooterct
 BOARD_SDCARD_DEVICE_PRIMARY := /dev/block/mmcblk1p1
 BOARD_SDCARD_DEVICE_SECONDARY := /dev/block/mmcblk1
 BOARD_SDEXT_DEVICE := /dev/block/mmcblk1p2
@@ -94,7 +94,7 @@ TARGET_RECOVERY_PIXEL_FORMAT := "RGB_565"
 BOARD_RECOVERY_SWIPE := true
 TARGET_RECOVERY_LCD_BACKLIGHT_PATH := \"/sys/class/leds/lcd-backlight/brightness\"
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_15x24.h\"
-BOARD_CUSTOM_GRAPHICS := ../../../device/htc/shooteru/recovery/graphics.c
+BOARD_CUSTOM_GRAPHICS := ../../../device/htc/shooterct/recovery/graphics.c
 
 #TWRP
 DEVICE_RESOLUTION := 540x960

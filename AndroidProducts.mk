@@ -18,4 +18,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/shooteru.mk
+    $(LOCAL_DIR)/shooterct.mk

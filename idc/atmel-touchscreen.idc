@@ -15,6 +15,7 @@
 # Changelog:
 # 2013-01-27 // Calibrated by Maxxy13
 
+
 # Input device configuration file for a touch screen that supports pressure,
 # size and orientation.  The pressure and size scale factors were obtained
 # by measuring the characteristics of the device itself and deriving
@@ -24,9 +25,11 @@
 # Note that these parameters are specific to a particular device model.
 # Different parameters will need to be used for other devices.
 
+
 # Basic Parameters
 touch.deviceType = touchScreen
 touch.orientationAware = 1
+
 
 # Size
 # Based on empirical measurements, we estimate the size of the contact
@@ -36,6 +39,7 @@ touch.size.scale = 15
 touch.size.bias = 0
 touch.size.isSummed = 0
 
+
 # Pressure
 # Driver reports signal strength as pressure.
 #
@@ -43,6 +47,7 @@ touch.size.isSummed = 0
 # units although we don't expect these values to be accurate.
 touch.pressure.calibration = amplitude
 touch.pressure.scale = 0.0105
+
 
 # Orientation
 touch.orientation.calibration = none
