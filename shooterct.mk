@@ -86,7 +86,7 @@ PRODUCT_COPY_FILES += \
 # Bluetooth firmware
 $(call inherit-product, device/htc/msm8660-common/bcm_hcd.mk)
 
-$(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4329/device-bcm.mk)
+$(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4330/device-bcm.mk)
 
 # keylayouts
 PRODUCT_COPY_FILES += \

@@ -99,3 +99,6 @@ qemu.hw.mainkeys=1
 
 # Disable GC freed lines
 dalvik.vm.debug.alloc=0
+
+# Enable CMCC SIM fot shooterct
+persist.radio.unlock.cmccsim = 1
