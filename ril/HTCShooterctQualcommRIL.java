@@ -46,7 +46,7 @@ import java.util.ArrayList;
  *
  * {@hide}
  */
-public class HTCVigorQualcommRIL extends RIL implements CommandsInterface {
+public class HTCShooterctQualcommRIL extends RIL implements CommandsInterface {
 
     private static final int RIL_UNSOL_ENTER_LPM = 1523;
     private static final int RIL_UNSOL_CDMA_3G_INDICATOR = 3009;
@@ -58,7 +58,7 @@ public class HTCVigorQualcommRIL extends RIL implements CommandsInterface {
     private static final int RIL_UNSOL_RESPONSE_DATA_NETWORK_STATE_CHANGED = 21007;
     private static final int RIL_UNSOL_RESPONSE_DATA_NETWORK_STATE_CHANGED_M7 = 5757;
 
-    public HTCVigorQualcommRIL(Context context, int networkMode, int cdmaSubscription) {
+    public HTCShooterctQualcommRIL(Context context, int networkMode, int cdmaSubscription) {
         super(context, networkMode, cdmaSubscription);
     }
 

@@ -36,7 +36,7 @@ BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := shooterct
 
 BOARD_USES_LEGACY_RIL := true
 BOARD_USE_NEW_LIBRIL_HTC := true
-BOARD_RIL_CLASS := "../../../device/htc/vigor/ril/"
+BOARD_RIL_CLASS := "../../../device/htc/shooterct/ril/"
 BOARD_RIL_NO_CELLINFOLIST:=true
 
 # 3D Support
@@ -58,8 +58,6 @@ BOARD_HOSTAPD_PRIVATE_LIB        := lib_driver_cmd_bcmdhd
 BOARD_WLAN_DEVICE                := bcmdhd
 BOARD_WPA_SUPPLICANT_DRIVER      := NL80211
 BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_bcmdhd
-BOARD_WLAN_DEVICE_REV 		 := bcm4330_b2
-WIFI_BAND                        := 802_11_BG
 WIFI_DRIVER_FW_PATH_STA          := "/vendor/firmware/fw_bcmdhd.bin"
 WIFI_DRIVER_FW_PATH_AP           := "/vendor/firmware/fw_bcmdhd_apsta.bin"
 WIFI_DRIVER_FW_PATH_P2P          := "/vendor/firmware/fw_bcmdhd_p2p.bin"
@@ -71,7 +69,7 @@ BOARD_HAVE_BLUETOOTH_BCM         := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/shooterct/bluetooth
 
 # Custom LUN File Path
-TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/class/android_usb/android0/f_mass_storage/lun/file
+TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/class/android_usb/android0/f_mass_storage/lun%d/file
 
 BOARD_KERNEL_CMDLINE := console=ttyHSL0 androidboot.hardware=shooterct no_console_suspend=1
 BOARD_KERNEL_BASE := 0x48800000

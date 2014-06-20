@@ -29,6 +29,14 @@ persist.user.panel3D=1
 rild.libpath=/system/lib/libhtc_ril.so
 ro.telephony.ril_class=HTCQualcommRIL
 ro.telephony.ril.v3=datacallapn,signalstrength
+ro.vendor.extension_library=/system/lib/libqc-opt.so
+ro.ril.enable.garbage.filter=0
+
+# RilLibPath for Ganlite by Sophia_Fan
+rilswitch.vendorlibpath=/system/lib/libhtc_ril.so
+
+ro.use_data_netmgrd=true
+persist.data_netmgrd_nint=8
 
 ro.ril.ecc.HTC-GCC=999,112,997
 ro.ril.ecc.HTC-WWE=999
@@ -49,25 +57,28 @@ ro.ril.enable.amr.wideband=0
 # Modify MMS APN retry timer from 5s to 2s.
 ro.gsm.2nd_data_retry_config=max_retries=3, 2000, 2000, 2000
 
-# shooteru RF team request
+# shooterct RF team request
 ro.ril.enable.dtm=0
 ro.ril.gprsclass=12
 ro.ril.hsdpa.category=10
 ro.ril.hsupa.category=6
-ro.ril.hsxpa=2
+ro.ril.hsxpa=3
 
 # Default network type.
 # 0 => WCDMA preferred.
 ro.telephony.default_network=0
 
 # Modify MTU from 1500 to 1472 on 3G network
-ro.ril.set.mtu1472=1
+ro.ril.set.mtusize=1500
 
 # For HSDPA low throughput
 ro.ril.disable.power.collapse=1
 
 # For China NEL
 ro.ril.enable.prl.recognition=1
+
+# For chooterct China NEL use
+ro.ril.update.vivo.acoustic = 1
 
 wifi.interface=wlan0
 wifi.supplicant_scan_interval=160
@@ -102,3 +113,25 @@ dalvik.vm.debug.alloc=0
 
 # Enable CMCC SIM fot shooterct
 persist.radio.unlock.cmccsim = 1
+
+# For CT C+W
+ro.config.cwenabl = 1
+
+# ruim ct porject.
+ro.ril.ruim.carrier = ct
+
+#Vivow_CT rilswitch path
+rild.libhtc_ril_switch_path=/system/lib/libhtc_ril_switch.so
+#Vivow_CT cw feature libcw_ril path
+rild.lib_cw_path=/system/lib/libcw_ril.so
+
+#VIvow_CT C+W enable
+ril.switch.cw.enable= 1
+#VIvow_CT RIL_SWITCH_ENABLE
+ril.switch.fuction.enable= 1
+
+# world phone feature enabled
+ro.ril.wp.feature = 1
+
+#Welly_Fang
+ro.htc.device.slot1 = RUIM

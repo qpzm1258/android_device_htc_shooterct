@@ -83,9 +83,12 @@ PRODUCT_COPY_FILES += \
     device/htc/shooterct/dsp/soundimage/srs_global.cfg:system/etc/soundimage/srs_global.cfg \
     device/htc/shooterct/dsp/soundimage/srsfx_trumedia_voice.cfg:system/etc/soundimage/srsfx_trumedia_voice.cfg
 
+# Wifi firmware
+BOARD_WLAN_DEVICE_REV 	:= bcm4330_b2
+WIFI_BAND               := 802_11_BG
+
 # Bluetooth firmware
 $(call inherit-product, device/htc/msm8660-common/bcm_hcd.mk)
-
 $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4330/device-bcm.mk)
 
 # keylayouts
@@ -93,12 +96,15 @@ PRODUCT_COPY_FILES += \
     device/htc/shooterct/keylayout/h2w_headset.kl:system/usr/keylayout/h2w_headset.kl\
     device/htc/shooterct/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl\
     device/htc/shooterct/keylayout/atmel-touchscreen.kl:system/usr/keylayout/atmel-touchscreen.kl \
-    device/htc/shooterct/keylayout/shooterct-keypad.kl:system/usr/keylayout/shooterct-keypad.kl
-
+    device/htc/shooterct/keylayout/shooterct-keypad.kl:system/usr/keylayout/shooterct-keypad.kl \
+    device/htc/shooterct/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl
 # Keychars
 PRODUCT_COPY_FILES += \
-    device/htc/shooterct/keychars/shooterct-keypad.kcm:system/usr/keychars/shooterct-keypad.kcm \
-    device/htc/shooterct/keychars/atmel-touchscreen.kcm:system/usr/keychars/atmel-touchscreen.kcm
+    device/htc/shooterct/keychars/Generic.kcm:system/usr/keychars/Generic.kcm \
+    device/htc/shooterct/keychars/qwerty.kcm:system/usr/keychars/qwerty.kcm \
+    device/htc/shooterct/keychars/qwerty2.kcm:system/usr/keychars/qwerty2.kcm \
+    device/htc/shooterct/keychars/Virtual.kcm:system/usr/keychars/Virtual.kcm \
+    device/htc/shooterct/keychars/shooterct-keypad.kcm:system/usr/keychars/shooterct-keypad.kcm
 
 # idc
 PRODUCT_COPY_FILES += \
@@ -136,6 +142,7 @@ PRODUCT_PACKAGES += \
 
 # Permissions
 PRODUCT_COPY_FILES += \
+	frameworks/native/data/etc/android.hardware.telephony.cdma.xml:system/etc/permissions/android.hardware.telephony.cdma.xml \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
 
 # We have enough storage space to hold precise GC data
