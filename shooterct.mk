@@ -129,7 +129,7 @@ PRODUCT_PACKAGES += \
     gps.shooterct
 
 ## The gps config appropriate for this device
-PRODUCT_COPY_FILES += device/common/gps/gps.conf_EU:system/etc/gps.conf
+PRODUCT_COPY_FILES += device/htc/shooterct/gps/gps.conf:system/etc/gps.conf
 
 # Kernel init.d script
 PRODUCT_COPY_FILES += \
